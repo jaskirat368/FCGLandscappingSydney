@@ -43,9 +43,18 @@ export default function Hero() {
       onMouseMove={handleMouseMove}
       className="relative h-screen min-h-[800px] flex flex-col justify-center overflow-hidden perspective-1000"
     >
-      {/* Background Layer - Parallax */}
+      {/* Background Layer - Parallax & Auto Animation */}
       <motion.div 
-        style={{ x: moveXReverse, y: moveYReverse, scale: 1.1 }}
+        style={{ x: moveXReverse, y: moveYReverse }}
+        animate={{ 
+          scale: [1.1, 1.15, 1.1],
+          rotate: [0, 1, -1, 0]
+        }}
+        transition={{ 
+          duration: 20, 
+          repeat: Infinity,
+          ease: "linear" 
+        }}
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-black/40 z-10" />
@@ -85,8 +94,8 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Main Content - 3D Tilt */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center pt-24 pb-32">
+      {/* Main Content - 3D Tilt & Auto Float */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center pt-24 pb-48 md:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Text Content */}
@@ -99,34 +108,39 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="flex items-center justify-center lg:justify-start gap-4 mb-6 md:mb-8">
-                <div className="h-[1px] w-12 bg-fcg-stone"></div>
-                <span className="text-fcg-stone uppercase tracking-widest text-sm font-bold">Modern Architectural Outdoor Living</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[0.9] mb-8 drop-shadow-2xl tracking-tight">
-                Crafting <br />
-                <span className="italic text-fcg-stone/90 font-light">Living</span> Sanctuaries
-              </h1>
-              
-              <p className="text-lg md:text-xl text-white/80 mb-10 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Transforming Sydney properties into award-winning outdoor spaces with precision engineering and horticultural excellence.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6">
-                <a 
-                  href={`tel:${BUSINESS_INFO.phone.replace(/\s/g, '')}`}
-                  className="btn-primary min-w-[180px] shadow-2xl shadow-fcg-green/20"
-                >
-                  Call Now
-                </a>
-                <Link 
-                  to="/contact"
-                  className="btn-outline-white min-w-[180px] backdrop-blur-sm"
-                >
-                  Request A Quote
-                </Link>
-              </div>
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="flex items-center justify-center lg:justify-start gap-4 mb-6 md:mb-8">
+                  <div className="h-[1px] w-12 bg-fcg-stone"></div>
+                  <span className="text-fcg-stone uppercase tracking-widest text-sm font-bold">Modern Architectural Outdoor Living</span>
+                </div>
+                
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[0.9] mb-8 drop-shadow-2xl tracking-tight">
+                  Crafting <br />
+                  <span className="italic text-fcg-stone/90 font-light">Living</span> Sanctuaries
+                </h1>
+                
+                <p className="text-lg md:text-xl text-white/80 mb-10 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                  Transforming Sydney properties into award-winning outdoor spaces with precision engineering and horticultural excellence.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6">
+                  <a 
+                    href={`tel:${BUSINESS_INFO.phone.replace(/\s/g, '')}`}
+                    className="btn-primary min-w-[180px] shadow-2xl shadow-fcg-green/20"
+                  >
+                    Call Now
+                  </a>
+                  <Link 
+                    to="/contact"
+                    className="btn-outline-white min-w-[180px] backdrop-blur-sm"
+                  >
+                    Request A Quote
+                  </Link>
+                </div>
+              </motion.div>
             </motion.div>
           </motion.div>
 
@@ -183,7 +197,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-        className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 text-white/50 flex flex-col items-center gap-2"
+        className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 text-white/50 hidden md:flex flex-col items-center gap-2"
       >
         <span className="text-[10px] uppercase tracking-widest">Scroll</span>
         <MousePointer2 size={16} />

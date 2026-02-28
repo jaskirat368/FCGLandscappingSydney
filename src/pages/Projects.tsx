@@ -67,7 +67,7 @@ export default function Projects() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1 }}
           className="absolute right-10 top-1/2 transform -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-4 cursor-pointer group"
-          onClick={() => window.scrollTo({ top: window.innerHeight * 0.8, behavior: 'smooth' })}
+          onClick={() => document.getElementById('projects-content')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <div className="w-[30px] h-[50px] rounded-full border-2 border-white/30 flex justify-center p-2 backdrop-blur-sm bg-white/5 group-hover:border-white/60 transition-colors shadow-lg shadow-black/20">
             <motion.div 
@@ -80,12 +80,12 @@ export default function Projects() {
         </motion.div>
       </div>
 
-      <section className="py-20 bg-white relative">
+      <section id="projects-content" className="py-16 bg-white relative">
          {/* Decorative line */}
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-fcg-green/20 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {PROJECTS.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -119,7 +119,7 @@ export default function Projects() {
           </div>
 
           {/* Gallery Section */}
-          <div className="border-t border-gray-100 pt-20">
+          <div id="gallery" className="border-t border-gray-100 pt-12">
             <div className="text-center mb-16">
               <span className="text-fcg-olive uppercase tracking-widest text-xs font-bold mb-3 block">Visual Diary</span>
               <h2 className="text-4xl md:text-5xl font-serif text-fcg-green">Gallery</h2>

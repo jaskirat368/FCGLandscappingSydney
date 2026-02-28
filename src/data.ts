@@ -171,15 +171,15 @@ export const PROJECTS = [
     description: "A complete transformation featuring modern paving, structured garden beds, and premium retaining solutions.",
     images: [
       "https://i.ibb.co/r2GHkGg9/553590182-18526974547058377-3426382547661024775-n.jpg",
-      "https://img.sanishtech.com/u/ce3c009a28984b0ff274e3c5eaad6e32.jpg",
-      "https://img.sanishtech.com/u/c01404793e03cb6a24c7308bfe52a7f0.jpg",
-      "https://img.sanishtech.com/u/4a06454a0c9c4abe6658ec0d74edfda7.jpg",
-      "https://img.sanishtech.com/u/af0276b130e2222cd340ddd835e73627.jpg",
-      "https://img.sanishtech.com/u/7930ce2dd1c81d1b91dde7a7278bdb68.jpg",
-      "https://img.sanishtech.com/u/c6c08239a5455536b2bc5356ee6d5310.jpg",
-      "https://img.sanishtech.com/u/53ad9b24de006cf4bcd8151d10f32358.jpg",
-      "https://img.sanishtech.com/u/f4356c82980351843c5126ebc0ec339c.jpg",
-      "https://img.sanishtech.com/u/6feef7e9203dc238048289a01ffb465d.jpg"
+      "https://i.ibb.co/Ndbtpwct/554818177-18526974571058377-4292695137333300193-n.jpg",
+      "https://i.ibb.co/Gf5DZ3Xd/554320898-18526974562058377-1416021889251629387-n.jpg",
+      "https://i.ibb.co/Wp21xz8h/555664795-18526974589058377-6640761015036617793-n.jpg",
+      "https://i.ibb.co/ytvYxSX/554446698-18526974580058377-5210917714805314022-n.jpg",
+      "https://i.ibb.co/KjM5853Y/554448677-18526974601058377-3945229916756495432-n.jpg",
+      "https://i.ibb.co/60RDLM0X/554599040-18526974610058377-3140872011088206330-n.jpg",
+      "https://i.ibb.co/DgrLgjTj/553549386-18526974619058377-3828007668402474465-n.jpg",
+      "https://i.ibb.co/whL2vFk6/555004113-18526974628058377-2498323819260621829-n.jpg",
+      "https://i.ibb.co/1YZFVRr1/553604406-18526974637058377-3514929190757942051-n.jpg"
     ]
   },
   {

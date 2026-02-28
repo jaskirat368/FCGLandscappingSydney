@@ -15,8 +15,17 @@ export default function ProjectDetail() {
     if (!project) return;
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 2000); // Change image every 2 seconds
     return () => clearInterval(interval);
+  }, [project]);
+
+  // Preload images
+  useEffect(() => {
+    if (!project) return;
+    project.images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
   }, [project]);
 
   if (!project) {
