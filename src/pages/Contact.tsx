@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data';
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setIsSubmitting(true);
+    
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/jaskiratforbusiness@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -124,53 +156,79 @@ export default function Contact() {
             {/* Form */}
             <div className="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100">
               <h3 className="text-2xl font-serif text-fcg-green mb-6">Request a Quote</h3>
-              <form 
-                action="https://formsubmit.co/jaskiratforbusiness@gmail.com" 
-                method="POST" 
-                className="space-y-6"
-              >
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
-                <input type="hidden" name="_subject" value="New Quote Request from FCG Landscaping" />
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                    <input type="text" id="firstName" name="first_name" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="John" required />
+              
+              {isSubmitted ? (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center animate-in fade-in zoom-in duration-300">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600">
+                    <CheckCircle size={32} />
                   </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                    <input type="text" id="lastName" name="last_name" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="Doe" required />
-                  </div>
+                  <h4 className="text-xl font-serif text-green-800 mb-2">Message Sent!</h4>
+                  <p className="text-green-700">
+                    Thank you! Your message has been sent successfully. We'll get back to you shortly.
+                  </p>
+                  <button 
+                    onClick={() => setIsSubmitted(false)}
+                    className="mt-6 text-sm font-medium text-green-700 hover:text-green-800 underline"
+                  >
+                    Send another message
+                  </button>
                 </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                  <input type="email" id="email" name="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="john@example.com" required />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="0400 000 000" required />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
-                  <input type="text" id="service" name="service" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all bg-white" placeholder="e.g. Landscape Design, Construction..." required />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
-                  <textarea id="message" name="project_details" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="Tell us about your project..." required></textarea>
-                </div>
-
-                <button 
-                  type="submit" 
-                  className="w-full btn-primary"
+              ) : (
+                <form 
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
                 >
-                  Send Message
-                </button>
-              </form>
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_subject" value="New Quote Request from FCG Landscaping" />
+                  <input type="hidden" name="_template" value="table" />
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                      <input type="text" id="firstName" name="first_name" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="John" required />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                      <input type="text" id="lastName" name="last_name" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="Doe" required />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="john@example.com" required />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="0400 000 000" required />
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+                    <input type="text" id="service" name="service" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all bg-white" placeholder="e.g. Landscape Design, Construction..." required />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
+                    <textarea id="message" name="project_details" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-fcg-green focus:border-transparent outline-none transition-all" placeholder="Tell us about your project..." required></textarea>
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={20} className="animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Message'
+                    )}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
 

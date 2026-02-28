@@ -16,8 +16,6 @@ import ServiceAreas from './pages/ServiceAreas';
 import Blog from './pages/Blog';
 import Legal from './pages/Legal';
 
-import ThankYou from './pages/ThankYou';
-
 import ProjectDetail from './pages/ProjectDetail';
 
 function ScrollToTop() {
@@ -59,7 +57,6 @@ export default function App() {
               <Route path="/privacy" element={<Legal />} />
               <Route path="/terms" element={<Legal />} />
               <Route path="/disclaimer" element={<Legal />} />
-              <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
           </main>
           <Footer />
