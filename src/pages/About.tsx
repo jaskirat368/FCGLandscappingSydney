@@ -69,7 +69,7 @@ export default function About() {
             >
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://aicdn.picsart.com/d189918a-742b-43c2-b306-71e1482c2d7b.jpg" 
+                  src="https://i.ibb.co/N2znkncq/unnamed.jpg" 
                   alt="Jamal Steer - Owner of FCG Landscaping" 
                   className="w-full h-full object-cover"
                 />
