@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fcglandscapingsydney.vercel.app/sitemap.xml
