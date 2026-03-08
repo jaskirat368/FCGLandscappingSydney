@@ -40,130 +40,101 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
+        "@type": "LandscapingService",
+        "name": "FCG Landscaping Sydney",
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop",
+        "url": "https://fcglandscapingsydney.vercel.app/",
+        "telephone": "0416 113 839",
+        "email": "1classgrass@gmail.com",
+        "priceRange": "$$",
+        "description": "FCG Landscaping Sydney is a top-rated professional landscaping company in Sydney, Australia. We specialize in landscape design, construction, garden maintenance, greenwalls, paving, decking, retaining walls, and irrigation solutions.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sydney",
+          "addressRegion": "NSW",
+          "addressCountry": "AU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -33.8688,
+          "longitude": 151.2093
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:00",
+          "closes": "17:00"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Sydney"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "18"
+        },
+        "makesOffer": [
           {
-            "@type": "LandscapingService",
-            "@id": "https://fcglandscapingsydney.vercel.app/#localbusiness",
-            "name": "FCG Landscaping Sydney",
-            "url": "https://fcglandscapingsydney.vercel.app/",
-            "logo": "https://fcglandscapingsydney.vercel.app/favicon.svg",
-            "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop",
-            "description": "FCG Landscaping Sydney is a top-rated professional landscaping company in Sydney, Australia. We specialize in landscape design, construction, garden maintenance, greenwalls, paving, decking, retaining walls, and irrigation solutions.",
-            "telephone": "0416 113 839",
-            "email": "1classgrass@gmail.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Sydney",
-              "addressRegion": "NSW",
-              "addressCountry": "AU"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": -33.8688,
-              "longitude": 151.2093
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Sydney"
-            },
-            "priceRange": "$$",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "18",
-              "bestRating": "5"
-            },
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-              ],
-              "opens": "07:00",
-              "closes": "17:00"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Landscaping Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Landscape Design"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Landscape Construction"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Landscape Maintenance"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Greenwalls & Vertical Gardens"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Paving"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Decking"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Retaining Walls"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Irrigation Solutions"
-                  }
-                }
-              ]
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Landscape Design"
             }
           },
           {
-            "@type": "Organization",
-            "@id": "https://fcglandscapingsydney.vercel.app/#organization",
-            "name": "FCG Landscaping",
-            "url": "https://fcglandscapingsydney.vercel.app/",
-            "logo": "https://fcglandscapingsydney.vercel.app/favicon.svg",
-            "sameAs": []
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Landscape Construction"
+            }
           },
           {
-            "@type": "WebSite",
-            "@id": "https://fcglandscapingsydney.vercel.app/#website",
-            "url": "https://fcglandscapingsydney.vercel.app/",
-            "name": "FCG Landscaping Sydney",
-            "description": "Best Landscaping Company Sydney | Top Rated Landscape Design & Construction",
-            "publisher": {
-              "@id": "https://fcglandscapingsydney.vercel.app/#organization"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Landscape Maintenance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Greenwalls & Vertical Gardens"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Paving"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Decking"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Retaining Walls"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Irrigation Solutions"
             }
           }
         ]
