@@ -61,7 +61,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 z-10" />
         <img 
           src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" 
-          alt="Luxury Landscaped Garden Sydney" 
+          alt="FCG Landscaping Sydney - Luxury Landscaped Garden Design & Construction" 
           className="w-full h-full object-cover"
         />
       </motion.div>

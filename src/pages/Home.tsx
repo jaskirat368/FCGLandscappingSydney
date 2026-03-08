@@ -11,8 +11,9 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>FCG Landscaping Sydney | Premium Landscape Design & Construction</title>
-        <meta name="description" content="Transforming outdoor spaces across Sydney with precision & craftsmanship. Expert landscape design, construction, greenwalls, and outdoor living solutions. Call 0416 113 839." />
+        <title>Best Landscaping Company Sydney | Top Rated Landscape Design & Construction</title>
+        <meta name="description" content="Looking for the best landscapers in Sydney? FCG Landscaping offers professional garden design, construction, paving, decking & retaining walls. Call 0416 113 839." />
+        <link rel="canonical" href="https://fcglandscapingsydney.vercel.app/" />
       </Helmet>
 
       <Hero />
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-fcg-olive uppercase tracking-widest text-xs font-bold">Our Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-fcg-green mt-3 mb-6">Comprehensive Landscaping Services</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-fcg-green mt-3 mb-6">Best Landscaping Services in Sydney</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               From concept to completion, we deliver high-end landscaping solutions tailored to your lifestyle and property.
             </p>
@@ -41,7 +42,7 @@ export default function Home() {
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
                     src={service.image} 
-                    alt={service.title} 
+                    alt={`Best ${service.title} Services in Sydney - FCG Landscaping`} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
@@ -78,7 +79,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
               <span className="text-fcg-olive uppercase tracking-widest text-xs font-bold">Our Portfolio</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-fcg-green mt-3">Featured Projects</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-fcg-green mt-3">Top Landscaping Projects in Sydney</h2>
             </div>
             <Link to="/projects" className="btn-secondary text-xs px-6 py-3">
               View Details <ArrowRight size={16} className="ml-2" />
@@ -98,7 +99,7 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] mb-6">
                   <img 
                     src={project.images[0]} 
-                    alt={project.title} 
+                    alt={`Top Landscaping Project Sydney: ${project.title} - ${project.category}`} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
@@ -118,8 +119,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-fcg-stone uppercase tracking-widest text-xs font-bold">Why Choose FCG</span>
-              <h2 className="text-4xl md:text-5xl font-serif mt-3 mb-8">Precision, Integrity & Structural Excellence</h2>
+              <span className="text-fcg-stone uppercase tracking-widest text-xs font-bold">Why We Are The Best Landscapers</span>
+              <h2 className="text-4xl md:text-5xl font-serif mt-3 mb-8">Precision Landscape Construction in Sydney</h2>
               <div className="space-y-8">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
@@ -154,7 +155,7 @@ export default function Home() {
               <div className="aspect-square rounded-2xl overflow-hidden border-8 border-white/10">
                 <img 
                   src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=2070&auto=format&fit=crop" 
-                  alt="FCG Landscaping Team at Work" 
+                  alt="FCG Landscaping Sydney Team - Professional Landscape Construction" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -192,7 +193,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-fcg-olive uppercase tracking-widest text-xs font-bold">Client Testimonials</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-fcg-green mt-3">What Our Clients Say</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-fcg-green mt-3">Reviews for Top Landscapers in Sydney</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -213,8 +214,8 @@ export default function Home() {
       <section className="py-24 bg-fcg-green relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-serif text-white mb-6">Bring Your Outdoor Vision to Life.</h2>
-          <p className="text-xl text-white/80 mb-10">Book your consultation today and start the transformation.</p>
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-6">Start Your Dream Garden Transformation Today.</h2>
+          <p className="text-xl text-white/80 mb-10">Contact the best landscaping company in Sydney for a consultation.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
               href={`tel:${BUSINESS_INFO.phone.replace(/\s/g, '')}`}

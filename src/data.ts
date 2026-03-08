@@ -26,71 +26,71 @@ export const SERVICES = [
   {
     id: "landscape-design",
     title: "Landscape Design",
-    shortDesc: "Custom planning and layout of outdoor spaces.",
-    fullDesc: "Our landscape design service is the foundation of every great project. We create custom plans that blend your property's unique characteristics with your lifestyle needs. From initial concept sketches to detailed planting plans, we ensure every element is considered.",
+    shortDesc: "Best landscape design planning and layout for Sydney outdoor spaces.",
+    fullDesc: "Our professional landscape design service is the foundation of every great project in Sydney. We create custom plans that blend your property's unique characteristics with your lifestyle needs. From initial concept sketches to detailed planting plans, we ensure every element is considered for the best garden design results.",
     icon: LayoutDashboard,
     image: "https://img.freepik.com/free-vector/landscape-design-composition_1284-4930.jpg?semt=ais_user_personalization&w=740&q=80"
   },
   {
     id: "landscape-construction",
     title: "Landscape Construction",
-    shortDesc: "Full build execution from start to finish.",
-    fullDesc: "We bring designs to life with precision construction. Our team handles all aspects of hardscaping and softscaping, ensuring structural integrity and premium finishes. We use high-quality materials built to withstand the Australian climate.",
+    shortDesc: "Top-rated landscape construction and build execution in Sydney.",
+    fullDesc: "We bring designs to life with precision construction. As leading landscape contractors in Sydney, our team handles all aspects of hardscaping and softscaping, ensuring structural integrity and premium finishes. We use high-quality materials built to withstand the Australian climate.",
     icon: Hammer,
     image: "https://freshcutlandscape.com/wp-content/uploads/2025/09/Landscape-Construction.jpg"
   },
   {
     id: "landscape-maintenance",
     title: "Landscape Maintenance",
-    shortDesc: "Ongoing care and upkeep of gardens.",
-    fullDesc: "Protect your investment with our professional maintenance services. We provide regular care including pruning, fertilizing, lawn care, and pest management to keep your landscape looking pristine year-round.",
+    shortDesc: "Professional garden maintenance and lawn care services.",
+    fullDesc: "Protect your investment with our professional maintenance services. We provide regular garden care including pruning, fertilizing, lawn care, and pest management to keep your Sydney landscape looking pristine year-round.",
     icon: Shovel,
     image: "https://img.freepik.com/premium-photo/gardener-cultivating-vibrant-plants-modern-landscape-design-drip-irrigation-system_1426-25599.jpg?semt=ais_user_personalization&w=740&q=80"
   },
   {
     id: "greenwalls",
     title: "Greenwalls / Vertical Gardens",
-    shortDesc: "Vertical planting systems for modern spaces.",
-    fullDesc: "Transform blank walls into living art. Our vertical garden systems are perfect for maximizing greenery in compact spaces or creating striking visual features. We select plant species that thrive in vertical environments.",
+    shortDesc: "Expert greenwall installation and vertical garden systems.",
+    fullDesc: "Transform blank walls into living art with the best greenwall installation in Sydney. Our vertical garden systems are perfect for maximizing greenery in compact spaces or creating striking visual features. We select plant species that thrive in vertical environments.",
     icon: Leaf,
     image: "https://img.freepik.com/premium-photo/potted-plants-pot_1606054-66.jpg?semt=ais_hybrid&w=740&q=80"
   },
   {
     id: "paving",
     title: "Paving",
-    shortDesc: "Stone, concrete, or tile paving solutions.",
-    fullDesc: "Expert installation of natural stone, concrete pavers, or porcelain tiles. We focus on proper base preparation to ensure longevity and stability, creating beautiful pathways, driveways, and entertaining areas.",
+    shortDesc: "High-quality stone, concrete, and tile paving contractors.",
+    fullDesc: "Expert installation of natural stone, concrete pavers, or porcelain tiles by professional paving contractors. We focus on proper base preparation to ensure longevity and stability, creating beautiful pathways, driveways, and entertaining areas across Sydney.",
     icon: Grid,
     image: "https://img.freepik.com/premium-photo/serene-backyard-oasis-landscaped-garden-with-patio-pond_1341597-34598.jpg?semt=ais_hybrid&w=740&q=80"
   },
   {
     id: "decking",
     title: "Decking",
-    shortDesc: "Timber or composite decking installations.",
-    fullDesc: "Extend your living space outdoors with a custom deck. We specialize in both natural timber and high-performance composite decking, designing structures that seamlessly integrate with your home's architecture.",
+    shortDesc: "Custom timber and composite deck builders in Sydney.",
+    fullDesc: "Extend your living space outdoors with a custom deck. As expert deck builders in Sydney, we specialize in both natural timber and high-performance composite decking, designing structures that seamlessly integrate with your home's architecture.",
     icon: LayoutDashboard, // Using LayoutDashboard as a proxy for Decking/Planks
     image: "https://img.freepik.com/free-photo/agriculture-healthy-food_23-2151969783.jpg?semt=ais_hybrid&w=740&q=80"
   },
   {
     id: "retaining-walls",
     title: "Retaining Walls",
-    shortDesc: "Structural walls for slope management.",
-    fullDesc: "Functional and aesthetic retaining solutions. Whether you need to level a sloping block or create garden tiers, we build structural retaining walls using timber, concrete sleepers, blockwork, or natural stone.",
+    shortDesc: "Structural retaining wall builders for slope management.",
+    fullDesc: "Functional and aesthetic retaining solutions. Whether you need to level a sloping block or create garden tiers, we are the best retaining wall builders in Sydney using timber, concrete sleepers, blockwork, or natural stone.",
     icon: Fence,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSENEmBPUFx6ykDOjCpQWTBqrrR35DgVWSdxw&s"
   },
   {
     id: "decorative-screening",
     title: "Decorative Screening",
-    shortDesc: "Custom privacy and aesthetic screening.",
-    fullDesc: "Enhance privacy and style with custom screening. We install timber slats, laser-cut metal, or composite screens that serve as functional barriers and decorative garden features.",
+    shortDesc: "Custom privacy screens and decorative garden panels.",
+    fullDesc: "Enhance privacy and style with custom screening. We install timber slats, laser-cut metal, or composite screens that serve as functional barriers and decorative garden features for Sydney homes.",
     icon: Grid,
     image: "https://www.strol.co.nz/wp-content/uploads/2025/06/Strol-screen-mouting-system-1024x576.jpg"
   },
   {
     id: "irrigation",
     title: "Irrigation Solutions",
-    shortDesc: "Efficient watering systems for landscapes.",
+    shortDesc: "Efficient automatic irrigation systems for Sydney gardens.",
     fullDesc: "Smart water management for healthy gardens. We design and install automated irrigation systems, including drip lines and pop-up sprinklers, to ensure your plants receive the right amount of water with minimal waste.",
     icon: Droplets,
     image: "https://5.imimg.com/data5/SELLER/Default/2025/1/482824163/GK/BL/RW/14318258/landscape-irrigation-services-500x500.jpeg"
@@ -98,8 +98,8 @@ export const SERVICES = [
   {
     id: "indoor-landscaping",
     title: "Indoor Landscaping",
-    shortDesc: "Green installations for interiors.",
-    fullDesc: "Bring the outdoors in. We design indoor plantscapes for homes and offices, selecting species that thrive in indoor conditions to improve air quality and aesthetics.",
+    shortDesc: "Premium indoor plant design and green installations.",
+    fullDesc: "Bring the outdoors in with our indoor landscaping services. We design indoor plantscapes for Sydney homes and offices, selecting species that thrive in indoor conditions to improve air quality and aesthetics.",
     icon: Home,
     image: "https://www.groundsguys.com/us/en-us/grounds-guys/_assets/images/guy-blog-interior-landscaping.webp"
   }
